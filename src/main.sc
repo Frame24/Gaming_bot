@@ -9,17 +9,10 @@ theme: /
         script:
             $session.coins_amount = 0;
             $session.temp_coins = 0;
-        a: В данный момент у вас {{ $session.coins_amount }} монет
-        script:
-            $session.temp_coins = getRandomInt(10);
-            $session.coins_amount = Number($session.coins_amount) + Number($session.temp_coins);
-        a: Вам выпали монеты, ровно {{ $session.temp_coins }} монет
-        a: В данный момент у вас {{ $session.coins_amount }} монет  
         
         state: Melon
             q: (melon/мелон)
             a: Перед тобой три коридора. В какой пойдешь?
-            a: В данный момент у вас {{ $session.coins_amount }} монет  
             
             state: Left
                 q: * *лев* *
