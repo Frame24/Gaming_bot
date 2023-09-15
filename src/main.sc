@@ -16,7 +16,7 @@ theme: /
             
             state: Left
                 q: * *лев* *
-                a: Тебя сьел дракон. Game over!
+                a: Тебя съел дракон. Game over!
                 go!: /GameOver
             
             state: Right
