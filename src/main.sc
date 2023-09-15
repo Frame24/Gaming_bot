@@ -35,6 +35,25 @@ theme: /
                         $session.coins_amount = Number($session.coins_amount) + Number($session.temp_coins);
                     a: Вам выпали монеты, ровно {{ $session.temp_coins }} монет
                     a: В данный момент у вас {{ $session.coins_amount }} монет
+                    
+                    state: SpendCoins
+                        a: Потратить монеты?
+                        
+                        state: Yes
+                            q: * Да *
+                            a: На что же потратились все монеты...
+                            script:
+                                $session.coins_amount = 0
+                            a: В данный момент у вас {{ $session.coins_amount }} монет
+                            go!: /Start
+                        
+                        state: No
+                            q: * Нет *
+                            a: Вам повезло! Количество монет удвоилось!
+                            script: 
+                                $session.coins_amount *= 2
+                            a: В данный момент у вас {{ $session.coins_amount }} монет
+                        
                 
                     
         state: NoMelon
