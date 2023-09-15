@@ -3,10 +3,12 @@ require: slotfilling/slotFilling.sc
 require: functions.js
 
 theme: /
-
+    
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
+        script:
+            $coins_amount = 0;
         
         state: Melon
             q: (melon/мелон)
@@ -28,8 +30,11 @@ theme: /
                 
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
-                    a: Вам выпали монеты, ровно {{ getRandomInt(10) }}
-                    a: В данный момент у вас {{ coins_count }} монет
+                    script:
+                        $temp_coins = getRandomInt(10)
+                        $coins_amount += $temp_coins
+                    a: Вам выпали монеты, ровно {{ $temp_coins }}
+                    a: В данный момент у вас {{ $coins_amount }} монет
                 
                     
         state: NoMelon
