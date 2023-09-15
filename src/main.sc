@@ -15,10 +15,12 @@ theme: /
             state: Left
                 q: * *лев* *
                 a: Тебя сьел дракон. Game over!
+                go: /Game over
             
             state: Right
                 q: * *прав* *
                 a: Думаешь, раз выбрал наПРАВо, то ты ПРАВ? А вот и нет! Провались в яму! Game over!
+                go: /Game over
             
             state: Straight
                 q: * *прям* *
