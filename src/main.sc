@@ -9,6 +9,7 @@ theme: /
         a: Молви друг и войди!
         script:
             $temp.coins_amount = 0;
+            $temp.temp_coins = 0;
         
         state: Melon
             q: (melon/мелон)
@@ -31,8 +32,8 @@ theme: /
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
                     script:
-                        $temp.temp_coins = getRandomInt(10)
-                        $temp.coins_amount += $temp.temp_coins 
+                        $temp.temp_coins = getRandomInt(10);
+                        $temp.coins_amount += $temp.temp_coins;
                     a: Вам выпали монеты, ровно {{ $temp.temp_coins }} монет
                     a: В данный момент у вас {{ $temp.coins_amount }} монет
                 
