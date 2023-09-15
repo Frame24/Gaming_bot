@@ -1,3 +1,3 @@
 function getRandomInt(max) {
-return Math.floor(Math.random() * max);
+return Math.round(Math.random() * max);
 }
