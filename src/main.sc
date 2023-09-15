@@ -8,8 +8,8 @@ theme: /
         q!: $regex</start>
         a: Молви друг и войди!
         script:
-            var $temp.coins_amount = 0;
-            var $temp.temp_coins = 0;
+            $temp.coins_amount = 0;
+            $temp.temp_coins = 0;
         a: В данный момент у вас {{ $temp.coins_amount }} монет
         
         state: Melon
