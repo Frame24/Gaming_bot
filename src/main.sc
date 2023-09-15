@@ -15,12 +15,12 @@ theme: /
             state: Left
                 q: * *лев* *
                 a: Тебя сьел дракон. Game over!
-                go: /Game over
+                go: /GameOver
             
             state: Right
                 q: * *прав* *
                 a: Думаешь, раз выбрал наПРАВо, то ты ПРАВ? А вот и нет! Провались в яму! Game over!
-                go: /Game over
+                go: /GameOver
             
             state: Straight
                 q: * *прям* *
@@ -35,7 +35,7 @@ theme: /
             event: noMatch
             a: На эльфийском, друг!
     
-    state: Game over
+    state: GameOver
         a: Сыграть снова?
         
         state: Yes
