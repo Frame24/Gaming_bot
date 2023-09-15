@@ -9,7 +9,6 @@ theme: /
         a: Молви друг и войди!
         script:
             $temp.coins_amount = 0;
-            $temp.temp_coins = 0;
         
         state: Melon
             q: (melon/мелон)
