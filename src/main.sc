@@ -20,6 +20,7 @@ theme: /
         state: Melon
             q: (melon/мелон)
             a: Перед тобой три коридора. В какой пойдешь?
+            a: В данный момент у вас {{ $temp.coins_amount }} монет  
             
             state: Left
                 q: * *лев* *
