@@ -6,8 +6,9 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
-        $temp.coins_amount = 0;
-        $temp.temp_coins = 0;
+        script:
+            $temp.coins_amount = 0;
+            $temp.temp_coins = 0;
         a: В данный момент у вас {{ $temp.coins_amount }} монет
         script:
             $temp.temp_coins = getRandomInt(10);
