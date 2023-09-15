@@ -8,7 +8,7 @@ theme: /
         q!: $regex</start>
         a: Молви друг и войди!
         script:
-            $coins_amount = 0;
+            $temp.coins_amount = 0;
         
         state: Melon
             q: (melon/мелон)
@@ -31,10 +31,10 @@ theme: /
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
                     script:
-                        $temp_coins = getRandomInt(10)
-                        $coins_amount += $temp_coins 
-                    a: Вам выпали монеты, ровно {{ $temp_coins }} монет
-                    a: В данный момент у вас {{ $coins_amount }} монет
+                        $temp.temp_coins = getRandomInt(10)
+                        $temp.coins_amount += $temp.temp_coins 
+                    a: Вам выпали монеты, ровно {{ $temp.temp_coins }} монет
+                    a: В данный момент у вас {{ $temp.coins_amount }} монет
                 
                     
         state: NoMelon
