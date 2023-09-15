@@ -2,27 +2,24 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 require: functions.js
 
-script:
-    var $temp
-
 theme: /
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
         script:
-            $temp.coins_amount = 0;
-            $temp.temp_coins = 0;
-        a: В данный момент у вас {{ $temp.coins_amount }} монет
+            $session.coins_amount = 0;
+            $session.temp_coins = 0;
+        a: В данный момент у вас {{ $session.coins_amount }} монет
         script:
-            $temp.temp_coins = getRandomInt(10);
-            $temp.coins_amount = Number($temp.coins_amount) + Number($temp.temp_coins);
-        a: Вам выпали монеты, ровно {{ $temp.temp_coins }} монет
-        a: В данный момент у вас {{ $temp.coins_amount }} монет  
+            $session.temp_coins = getRandomInt(10);
+            $session.coins_amount = Number($session.coins_amount) + Number($session.temp_coins);
+        a: Вам выпали монеты, ровно {{ $session.temp_coins }} монет
+        a: В данный момент у вас {{ $session.coins_amount }} монет  
         
         state: Melon
             q: (melon/мелон)
             a: Перед тобой три коридора. В какой пойдешь?
-            a: В данный момент у вас {{ $temp.coins_amount }} монет  
+            a: В данный момент у вас {{ $session.coins_amount }} монет  
             
             state: Left
                 q: * *лев* *
@@ -41,10 +38,10 @@ theme: /
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
                     script:
-                        $temp.temp_coins = getRandomInt(10);
-                        $temp.coins_amount = Number($temp.coins_amount) + Number($temp.temp_coins);
-                    a: Вам выпали монеты, ровно {{ $temp.temp_coins }} монет
-                    a: В данный момент у вас {{ $temp.coins_amount }} монет
+                        $session.temp_coins = getRandomInt(10);
+                        $session.coins_amount = Number($session.coins_amount) + Number($session.temp_coins);
+                    a: Вам выпали монеты, ровно {{ $session.temp_coins }} монет
+                    a: В данный момент у вас {{ $session.coins_amount }} монет
                 
                     
         state: NoMelon
