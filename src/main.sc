@@ -3,9 +3,6 @@ require: slotfilling/slotFilling.sc
 require: functions.js
 
 theme: /
-    script:
-        $temp.coins_amount = 0;
-        $temp.temp_coins = 0;
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
