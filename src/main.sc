@@ -52,6 +52,7 @@ theme: /
                         script: 
                             $session.coins_amount *= 2
                         a: В данный момент у вас {{ $session.coins_amount }} монет
+                        go!: /Start/Melon
                     
                 
                     
