@@ -6,13 +6,13 @@ theme: /
         q!: $regex</start>
         a: Молви друг и войди!
         
-            state: Melon
-                q: melon
-                a: Перед тобой три коридора. В какой пойдешь?
+        state: Melon
+            q: melon
+            a: Перед тобой три коридора. В какой пойдешь?
                 
-            state: NoMelon
-                event: noMatch
-                a: На эльфийском, друг!
+        state: NoMelon
+            event: noMatch
+            a: На эльфийском, друг!
         
     state: NoMatch
         event!: noMatch
