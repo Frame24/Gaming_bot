@@ -9,7 +9,7 @@ theme: /
         a: Молви друг и войди!
         
         state: Melon
-            q: melon
+            q: (melon/мелон)
             a: Перед тобой три коридора. В какой пойдешь?
             
             state: Left
@@ -32,6 +32,17 @@ theme: /
         state: NoMelon
             event: noMatch
             a: На эльфийском, друг!
+    
+    state: Game over
+        a: Сыграть снова?
+        
+        state: Yes
+            q: * Да *
+            go: /Start
+        
+        state: No
+            q: * Нет *
+            a: Игра окончена...
         
     state: NoMatch
         event!: noMatch
