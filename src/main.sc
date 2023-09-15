@@ -7,7 +7,10 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
-        
+        state: Open
+            q: * (~сломать|~открывать|~вскрыть) *
+            a: Вам выпали монеты, ровно {{ getRandomInt(10) }}
+            
         state: Melon
             q: melon
             a: Перед тобой три коридора. В какой пойдешь?
