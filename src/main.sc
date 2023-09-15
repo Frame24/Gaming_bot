@@ -2,6 +2,9 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 require: functions.js
 
+script:
+    var $temp
+
 theme: /
     state: Start
         q!: $regex</start>
