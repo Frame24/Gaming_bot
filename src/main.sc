@@ -4,4 +4,4 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём.
+        a: Молви друг и войди!
