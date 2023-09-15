@@ -32,8 +32,8 @@ theme: /
                     q: * (~сломать|~открывать|~вскрывать) *
                     script:
                         $temp_coins = getRandomInt(10)
-                        $coins_amount += $temp_coins
-                    a: Вам выпали монеты, ровно {{ $temp_coins }}
+                        $coins_amount += $temp_coins 
+                    a: Вам выпали монеты, ровно {{ $temp_coins }} монет
                     a: В данный момент у вас {{ $coins_amount }} монет
                 
                     
